@@ -1,0 +1,30 @@
+{
+  "name": "bot",
+  "version": "0.1.0",
+  "description": "Discord Bot for automating menial tasks.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/albuquerque-web-stack/bot.git"
+  },
+  "author": "Albuquerque ARTCC Web Team",
+  "license": "CC-BY-NC-SA-4.0",
+  "type": "module",
+  "bugs": {
+    "url": "https://gitlab.com/albuquerque-web-stack/bot/issues"
+  },
+  "homepage": "https://gitlab.com/albuquerque-web-stack/bot#readme",
+  "devDependencies": {
+    "eslint": "^7.19.0"
+  },
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "ioredis": "^4.19.4",
+    "mongoose": "^5.11.15",
+    "mongoose-lean-virtuals": "^0.7.6"
+  }
+}
