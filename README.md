@@ -14,6 +14,6 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/
 # Contributors
 The following people have contributed to this project. If you have contributed, but your name is not listed here, or if you are on this list and would like to be removed, please email atm@zabartcc.org.
 
-Austin Robison  
+Alexandra Robison  
 
 Thank you to all contributors, past and present.
