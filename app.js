@@ -122,8 +122,7 @@ const handleWithYou = async msg => {
 				.setDescription('The "With You" counter is easy to use:')
 				.addField('~wy add', 'Increment the With You:tm: counter by one.')
 				.addField('~wy rm (~wy remove, ~wy delete)', 'Decrement the With You:tm: counter by one.')
-				.addField('~wy (~wy show, ~wy count)', 'Show the number of With Yous:tm:.')
-				.addField('~wy help', 'Show the With You:tm: help.');
+				.addField('~wy (~wy show, ~wy count)', 'Show the number of With Yous:tm:.');
 			break;
 		case "add":
 			await zabApi.post(`/discord/withyou`);
@@ -141,15 +140,16 @@ const handleWithYou = async msg => {
 		case "count":
 		case undefined:
 			embed.setTitle('With You Counter')
-				.setDescription(`The "With You" counter is currently at ${data.data.withYou}`)
-				.addField('~wy help', 'Show the With You:tm: help.');
+				.setDescription(`The "With You" counter is currently at ${data.data.withYou}.`)
+				.addField('What is the With You counter?', 'The With You counter keeps track of how many times pilots check in on frequency "with you". Feel free to use it during your next controlling session!');
 			break;
 		default:
 			embed.setTitle('With You Counter')
-				.setDescription(`Sorry, that command was not recognized.`)
-				.addField('~wy help', 'Show the With You:tm: help.');
+				.setDescription(`Sorry, that command was not recognized.`);
 			break;
 	}
+
+	embed.addField('~wy help', 'Show the With You:tm: help.');
 
 	await msg.channel.send({ embed });
 };
