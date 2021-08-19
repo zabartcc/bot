@@ -6,9 +6,9 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const zabApi = axios.create({
-	baseURL: process.env.API_URL,
+	baseURL: process.env.ZAB_API_URL,
 	headers: {
-		'Authorization': `Bearer ${process.env.API_KEY}`
+		'Authorization': `Bearer ${process.env.ZAB_API_KEY}`
 	}
 });
 
