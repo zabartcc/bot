@@ -2,6 +2,11 @@ import { Message, MessageEmbed } from 'discord.js';
 import Redis from 'ioredis';
 import axios from 'axios';
 import mp from 'metar-parser';
+import dotenv from 'dotenv-flow';
+
+dotenv.config();
+
+console.log(process.env.REDIS_URI);
 
 const redis = new Redis(process.env.REDIS_URI);
 
