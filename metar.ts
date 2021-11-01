@@ -6,8 +6,6 @@ import dotenv from 'dotenv-flow';
 
 dotenv.config();
 
-console.log(process.env.REDIS_URI);
-
 const redis = new Redis(process.env.REDIS_URI);
 
 String.prototype.capitalize = function() {
@@ -15,7 +13,6 @@ String.prototype.capitalize = function() {
 };
 
 const sendMetarMessage = async (metar: string, msg: Message) => {
-	console.log(metar);
 	const embed = new MessageEmbed()
 		.setColor('#208951')
 		.setAuthor('Albuquerque ARTCC', 'https://zabartcc.sfo3.digitaloceanspaces.com/images/zab_logo.png', '')
