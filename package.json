@@ -4,7 +4,9 @@
   "description": "Discord Bot for automating menial tasks.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsc -w & nodemon dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p ."
   },
   "repository": {
     "type": "git",
@@ -12,19 +14,29 @@
   },
   "author": "Albuquerque ARTCC Web Team",
   "license": "CC-BY-NC-SA-4.0",
-  "type": "module",
   "bugs": {
     "url": "https://gitlab.com/albuquerque-web-stack/bot/issues"
   },
   "homepage": "https://gitlab.com/albuquerque-web-stack/bot#readme",
   "devDependencies": {
-    "eslint": "^7.19.0"
+    "@types/dotenv-flow": "^3.2.0",
+    "@types/ioredis": "^4.27.8",
+    "@types/node": "^16.11.6",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.1",
+    "nodemon": "^2.0.14"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
+    "dotenv-flow": "^3.2.0",
     "ioredis": "^4.19.4",
-    "mongoose-lean-virtuals": "^0.7.6"
+    "metar-parser": "^1.0.0",
+    "mongoose-lean-virtuals": "^0.7.6",
+    "typescript": "^4.4.4"
   }
 }
