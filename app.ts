@@ -1,6 +1,5 @@
 import Discord, { MessageEmbed } from 'discord.js';
 import dotenv from 'dotenv-flow';
-import handleWithYou from './withYou';
 import handleMetar from './metar';
 import handleTag from './tag';
 
@@ -11,21 +10,18 @@ const APP_MODE = process.env.NODE_ENV;
 const c = new Discord.Client();
 
 const channels = {
-	botAdmin: '546532863026397194',
-	withYou: '877824455064301588',
+	botAdmin: '546532863026397194'
 };
 
 const COMMAND_PREFIX = '~';
 
 const COMMANDS = {
-	withYou: `${COMMAND_PREFIX}wy`,
 	metar: `${COMMAND_PREFIX}metar`,
 	help: `${COMMAND_PREFIX}help`,
 	tag: `${COMMAND_PREFIX}tag`,
 };
 
 const HELP_TEXT = [
-	[`${COMMANDS.withYou} <command>`, `WITH YOU:tm: - For more information, please use **${COMMANDS.withYou} help** in <#877824455064301588>`],
 	[`${COMMANDS.metar} <icao>`, 'Get weather for airport.'],
 	[COMMANDS.help, 'Show this message'],
 ];
@@ -52,8 +48,6 @@ c.on('message', async (msg) => {
 			}
 
 			msg.channel.send({ embed });
-		} else if (msg.content.startsWith(COMMANDS.withYou) && msg.channel.id === channels.withYou) {
-			handleWithYou(msg);
 		} else if(msg.content.startsWith(COMMANDS.metar)) {
 			handleMetar(msg);
 		} else if(msg.content.startsWith(COMMANDS.tag) && msg.channel.id === channels.botAdmin) {
